@@ -1,0 +1,8 @@
+\copy Distribution_centers FROM '/mnt/d/data/archive/distribution_centers.csv' CSV HEADER NULL '';
+\copy events  FROM '/mnt/d/data/archive/events.csv' CSV HEADER NULL '';
+\copy inventory_items  FROM '/mnt/d/data/archive/inventory_items.csv' CSV HEADER NULL '';
+\copy order_items  FROM '/mnt/d/data/archive/order_items.csv' CSV HEADER NULL '';
+\copy orders  FROM '/mnt/d/data/archive/orders.csv' CSV HEADER NULL '';
+\copy products  FROM '/mnt/d/data/archive/products.csv' CSV HEADER NULL '';
+\copy users  FROM '/mnt/d/data/archive/users.csv' CSV HEADER NULL '';
+
