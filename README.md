@@ -23,7 +23,7 @@ examine operational performance such as processing time, delays, and status dist
 ---
 Dataset Structure
 The project uses seven main tables:
-`distribution\_centers`  
+`distribution_centers`  
 Contains warehouse or distribution center information.
 `users`  
 Contains customer profile and acquisition details such as country, city, and traffic source.
@@ -33,53 +33,53 @@ Contains product-level information such as category, brand, department, retail p
 Contains order-level records with timestamps and order status.
 `events`  
 Contains user activity and behavioral events such as product views, cart actions, and purchases.
-`inventory\_items`  
+`inventory_items`  
 Contains item-level inventory and sale information.
-`order\_items`  
+`order_items`  
 Links orders, products, users, and inventory items at the line-item level.
 ---
 Project Structure
-1) Schema Setup
+1) Schema Setup:
 These files prepare the database schema by casting columns to the correct data types and adding primary keys and foreign keys.
 Files:
-`distribution\_centers.sql`
+`distribution_centers.sql`
 `users.sql`
 `products.sql`
 `orders.sql`
 `events.sql`
-`inventory\_items.sql`
-`order\_items.sql`
+`inventory_items.sql`
+`order_items.sql`
 Purpose:
 standardize column data types
 enforce relational integrity
 make the dataset ready for analysis
 ---
-2) Data Quality Checks
+2) Data Quality Checks:
 This stage checks the raw data for two major issues:
-A. Duplicate checks
+A. Duplicate checks:
 These files detect duplicate IDs, duplicate business keys, or repeated records in each table.
-B. Missing value checks
+B. Missing value checks:
 These files detect missing fields, identify affected columns, and in some cases apply simple filling or cleanup logic.
 Files used for data quality:
-`distribution\_centers.sql`
+`distribution_centers.sql`
 `users.sql`
 `products.sql`
 `orders.sql`
 `events.sql`
-`inventory\_items.sql`
-`order\_items.sql`
+`inventory_items.sql`
+`order_items.sql`
 Purpose:
 make the data more reliable
 reduce errors in later analysis
 understand which tables need cleanup before reporting
 ---
-3) Customer Segmentation
+3) Customer Segmentation:
 This group focuses on customer behavior at the customer level.
 Files:
 `recency.sql`
-`frequency\_analysis.sql`
-`monetary\_segmentation.sql`
-`basic\_rfm\_classification.sql`
+`frequency_analysis.sql`
+`monetary_segmentation.sql`
+`basic_rfm_classification.sql`
 What this section measures:
 Recency: how recently a customer placed an order relative to the latest date in the dataset
 Frequency: how often a customer ordered
@@ -91,12 +91,12 @@ detect repeat customers
 separate high-value and low-value customers
 build a foundation for customer segmentation
 ---
-4) Revenue, Profitability, and Order-Level Performance
+4) Revenue, Profitability, and Order-Level Performance:
 This group measures the commercial side of the business.
 Files:
-`revenue\_metrics.sql`
-`profitability\_analysis.sql`
-`order\_level\_kpi.sql`
+`revenue_metrics.sql`
+`profitability_analysis.sql`
+`order_level_kpi.sql`
 What this section measures:
 gross revenue and net revenue
 monthly revenue trend
@@ -112,12 +112,12 @@ identify top revenue drivers
 compare revenue with profitability
 highlight the most valuable products and customers
 ---
-5) User Behavior and Acquisition Analysis
+5) User Behavior and Acquisition Analysis:
 This group studies how users behave on the website and which traffic sources perform best.
 Files:
-`funnel\_analysis.sql`
-`session\_analysis.sql`
-`traffic\_source\_performence.sql`
+`funnel_analysis.sql`
+`session_analysis.sql`
+`traffic_source_performence.sql`
 What this section measures:
 progression through key funnel stages
 stage-to-stage conversion rates
@@ -133,12 +133,12 @@ identify where users drop off before purchase
 compare the quality of acquisition channels
 connect behavioral data with business outcomes
 ---
-6) Operational and Order-Status Analysis
+6) Operational and Order-Status Analysis:
 This group focuses on process efficiency and delivery-related behavior.
 Files:
 `delay-bottleneck-detection.sql`
-`processing\_time\_analysis.sql`
-`status\_distribution.sql`
+`processing_time_analysis.sql`
+`status_distribution.sql`
 What this section measures:
 order status distribution
 order processing time
@@ -170,7 +170,7 @@ grouping and filtering
 common table expressions (CTEs)
 conditional logic with `CASE`
 date and timestamp calculations
-conversion and formatting with `TO\_CHAR`
+conversion and formatting with `TO_CHAR`
 funnel logic using event sequences
 customer segmentation logic
 data cleaning and validation queries
