@@ -1,11 +1,13 @@
+=============================
 COMMERCIAL PERFORMANCE README
-
+=============================
 Files covered:
 - order_level_kpi.sql
 - profitability_analysis.sql
 - revenue_metrics.sql
 
 Overview
+--------
 This set of SQL queries evaluates commercial performance from three complementary angles:
 1) order efficiency and customer value,
 2) product and category profitability,
@@ -16,9 +18,9 @@ Together, these scripts help answer three business questions:
 - Which products or categories are most and least profitable?
 - How is revenue distributed across time, categories, and countries?
 
---------------------------------------------------
+----------------------
 1. order_level_kpi.sql
---------------------------------------------------
+----------------------
 Purpose
 This file measures core order-level KPIs using completed and shipped order items.
 
@@ -37,9 +39,9 @@ How to interpret it
 - Higher AOV usually means stronger order value, though it should be interpreted alongside order count and customer mix.
 - Top-customer output helps identify concentration risk and high-value customer segments.
 
---------------------------------------------------
+-----------------------------
 2. profitability_analysis.sql
---------------------------------------------------
+-----------------------------
 Purpose
 This file focuses on profit generation rather than revenue alone.
 It compares selling price with product cost to evaluate markup, profit margin, and total profit.
@@ -69,9 +71,9 @@ How to interpret it
 - Markup and margin should be read separately: markup is cost-based, margin is selling-price-based.
 - Product-level and category-level profitability together give both detailed and strategic views.
 
---------------------------------------------------
+----------------------
 3. revenue_metrics.sql
---------------------------------------------------
+----------------------
 Purpose
 This file measures revenue from multiple perspectives: total, trend over time, category, and geography.
 
@@ -100,9 +102,9 @@ How to interpret it
 - Monthly trends help show momentum, not just totals.
 - Category and country breakdowns show where revenue concentration exists.
 
---------------------------------------------------
+-----------------------------------
 How these three files work together
---------------------------------------------------
+-----------------------------------
 These files should be read as one performance-analysis workflow:
 
 - order_level_kpi.sql explains order value and top customer contribution.
@@ -114,17 +116,17 @@ Recommended interpretation order:
 2) Use order_level_kpi.sql to understand order value and customer contribution.
 3) Use profitability_analysis.sql to confirm whether revenue growth translates into profit.
 
---------------------------------------------------
+------------------------
 Important modeling notes
---------------------------------------------------
+------------------------
 - Revenue in these scripts is based on product retail price.
 - Profitability calculations compare retail price against product cost.
 - Several outputs format numbers as text with € or % for presentation, which is good for reporting but less suitable for downstream numerical processing.
 - Completed and shipped statuses are treated as revenue-contributing states in most queries.
 
---------------------------------------------------
+-------------------------
 Suggested project framing
---------------------------------------------------
+-------------------------
 You can describe this SQL set as:
 
 "A commercial performance analysis that combines revenue measurement, order-level KPIs, and profitability analysis to evaluate not only how much the business sells, but also how efficiently those sales convert into customer value and profit."
