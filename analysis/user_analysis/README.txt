@@ -1,3 +1,4 @@
+==================================
 USER BEHAVIOR & ACQUISITION README
 ==================================
 
@@ -18,7 +19,7 @@ Together, they answer three business questions:
 2. How engaged are users during each visit/session?
 3. Which traffic sources bring the most valuable users?
 
-
+----------------------
 1) funnel_analysis.sql
 ----------------------
 Purpose:
@@ -72,7 +73,7 @@ How to interpret it:
 - High cart-to-purchase drop-off may suggest checkout friction, delivery cost issues, or weak purchase commitment
 - If cart does not frequently appear in the correct event order, it may not be a reliable funnel stage in this dataset
 
-
+-----------------------
 2) session_analysis.sql
 -----------------------
 Purpose:
@@ -116,7 +117,7 @@ How to interpret it:
 - A high share of low-event sessions can indicate low engagement
 - A broader events-per-session distribution can suggest richer browsing behavior
 
-
+---------------------------------
 3) traffic_source_performence.sql
 ---------------------------------
 Purpose:
@@ -170,7 +171,7 @@ How to interpret it:
 - A source with high gross revenue but weaker net revenue may be associated with more returns
 - The highest net-revenue channel is often the strongest acquisition performer from a business perspective
 
-
+--------------------------------
 How the three files fit together
 --------------------------------
 These files should be read as one analysis set:
@@ -189,7 +190,7 @@ Combined, they support a full user-behavior and acquisition story:
 - Session analysis shows how deeply users engage
 - Traffic source analysis shows where the highest-value traffic comes from
 
-
+-------------------------
 Suggested project framing
 -------------------------
 You can present this group as:
@@ -200,7 +201,7 @@ or
 
 "Website Journey, Session Engagement, and Traffic Source Performance"
 
-
+--------------------------------------------------
 Suggested summary sentence for a portfolio/project
 --------------------------------------------------
 This analysis set examines user behavior from three angles: funnel progression, session-level engagement, and acquisition-channel performance. It helps identify where users drop off in the journey, how intensely they interact with the site, and which traffic sources generate the strongest commercial outcomes.
