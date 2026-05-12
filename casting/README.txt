@@ -1,3 +1,4 @@
+===================
 SCHEMA SETUP README
 ===================
 
@@ -19,14 +20,17 @@ They do two things:
 1. Convert each column to the correct PostgreSQL data type.
 2. Add primary keys and foreign keys so the tables are linked correctly.
 
+----------------------
 Why these files matter
 ----------------------
+
 Without this setup step, analysis queries can become unreliable because:
 - numbers may still be stored as text
 - dates may not behave like timestamps
 - joins may fail or be harder to validate
 - relationships between tables may not be enforced
 
+-------------------
 What each file does
 -------------------
 distribution_centers.sql
@@ -50,6 +54,7 @@ Prepares inventory-level product records and links them to products and distribu
 order_items.sql
 Prepares item-level order records and links them to orders, users, products, and inventory items.
 
+-------------------------
 Suggested execution order
 -------------------------
 Run the files in this order to avoid foreign-key dependency problems:
@@ -62,6 +67,7 @@ Run the files in this order to avoid foreign-key dependency problems:
 6. inventory_items.sql
 7. order_items.sql
 
+------------
 Project role
 ------------
 This group should be treated as the data-preparation layer of the project.
