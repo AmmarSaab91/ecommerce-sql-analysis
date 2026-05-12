@@ -1,7 +1,9 @@
-README: Operational and Status Analysis Queries
-
+=======================================
+Operational and Status Analysis Queries
+=======================================
 Overview
-This README explains three SQL files used to evaluate operational performance and order outcomes in the ecommerce dataset. Together, these queries help identify where fulfillment slows down, how long each stage of the order lifecycle takes, and how orders are distributed across final statuses such as complete, cancelled, and returned.
+--------
+This file explains three SQL files used to evaluate operational performance and order outcomes in the ecommerce dataset. Together, these queries help identify where fulfillment slows down, how long each stage of the order lifecycle takes, and how orders are distributed across final statuses such as complete, cancelled, and returned.
 
 Files covered
 1. delay-bottleneck-detection.sql
