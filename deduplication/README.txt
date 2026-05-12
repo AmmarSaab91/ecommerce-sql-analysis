@@ -1,5 +1,6 @@
+====================================
 DATA QUALITY DUPLICATE CHECKS README
-===================================
+====================================
 
 Files covered
 -------------
@@ -19,7 +20,7 @@ Their purpose is to help verify whether the main tables contain:
 - duplicate primary-key values
 - duplicate business records
 - repeated rows that may distort analysis results
-
+-----------------------
 Why these checks matter
 -----------------------
 Before building KPIs, segmentation, funnel analysis, or profitability analysis, it is important to confirm that the source tables are clean.
@@ -30,6 +31,7 @@ Duplicate rows can:
 - distort customer behavior metrics
 - break joins and consistency checks
 
+-------------------
 What each file does
 -------------------
 1. distribution_centers.sql
@@ -58,6 +60,7 @@ What each file does
 7. users.sql
    Checks for duplicate user IDs and repeated customer records across the main profile fields.
 
+----------------------
 How to use these files
 ----------------------
 Run these checks before starting business analysis.
@@ -69,17 +72,20 @@ If duplicates appear:
 - decide whether duplicates are valid or true data problems
 - use the deletion logic carefully and only after backup/review
 
+--------------
 Important note
 --------------
 The delete statements in orders.sql are examples for deduplication.
 They should be reviewed carefully before running on a production or final project database.
 
+-------------------------
 Suggested project framing
 -------------------------
 You can describe this set as:
 
 "Initial data-quality validation focused on duplicate detection across the core ecommerce tables."
 
+----------------
 Summary sentence
 ----------------
 This SQL set performs duplicate checks across the main ecommerce tables to validate data quality before deeper analysis such as customer segmentation, funnel tracking, revenue analysis, and operational reporting.
