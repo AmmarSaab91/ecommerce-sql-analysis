@@ -1,3 +1,4 @@
+=====================
 CUSTOMER SEGMENTATION
 =====================
 
@@ -17,7 +18,7 @@ Together, these files analyze customer behavior from three classic segmentation 
 
 The final file, basic_rfm_classification.sql, combines those three dimensions into simple business-facing customer groups.
 
-
+-------------------
 1) RECENCY ANALYSIS
 -------------------
 File: recency.sql
@@ -48,7 +49,7 @@ Important note:
 This file calculates recency from all orders in the orders table, not only completed or shipped orders.
 So its logic is broader than the RFM query, which filters to completed/shipped activity.
 
-
+---------------------
 2) FREQUENCY ANALYSIS
 ---------------------
 File: frequency_analysis.sql
@@ -78,7 +79,7 @@ Important note:
 This file uses completed and shipped orders only.
 That makes the frequency metric closer to realized customer buying behavior.
 
-
+------------------------
 3) MONETARY SEGMENTATION
 ------------------------
 File: monetary_segmentation.sql
@@ -118,7 +119,7 @@ How to interpret it:
 Important note:
 Revenue and profit are calculated at the order-item level, then aggregated to the customer or category level.
 
-
+---------------------------
 4) BASIC RFM CLASSIFICATION
 ---------------------------
 File: basic_rfm_classification.sql
@@ -187,7 +188,7 @@ Important note about rule order:
 Because the segmentation uses CASE logic, the first matching rule wins.
 That means some high-value customers may be labeled as Best Customers or At Risk before they reach the Big Spenders label.
 
-
+-------------------------------
 HOW THE FOUR FILES FIT TOGETHER
 -------------------------------
 Recommended reading order:
@@ -202,7 +203,7 @@ Why this order works:
 - Monetary explains customer value
 - RFM combines the three into business segments
 
-
+---------------------------------------
 BUSINESS QUESTIONS THESE QUERIES ANSWER
 ---------------------------------------
 - Who bought most recently?
@@ -213,7 +214,7 @@ BUSINESS QUESTIONS THESE QUERIES ANSWER
 - Is revenue concentrated in a small number of customers or product categories?
 - Which customers should be treated as best, new, at risk, or high-value?
 
-
+-------------------------
 FINAL INTERPRETATION NOTE
 -------------------------
 These queries produce historical segmentation based on the data available in the dataset.
