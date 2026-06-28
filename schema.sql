@@ -90,5 +90,5 @@ CREATE TABLE "order_items"(
     "shipped_at" TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL,
     "delivered_at" TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL,
     "returned_at" TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL,
-    "sale_price" INTERGER NOT NULL
+    "sale_price" INTEGER NOT NULL
 );
