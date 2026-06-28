@@ -44,10 +44,10 @@ CREATE TABLE "orders"(
     "user_id" INTEGER REFERENCES users(id) NOT NULL,
     "status" VARCHAR(255) NOT NULL,
     "gender" CHAR(1) NOT NULL,
-    "created_at" TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL,
-    "returned_at" TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL,
-    "shipped_at" TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL,
-    "delivered_at" TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL,
+    "created_at" TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL ,
+    "returned_at" TIMESTAMP(0) WITHOUT TIME ZONE ,
+    "shipped_at" TIMESTAMP(0) WITHOUT TIME ZONE ,
+    "delivered_at" TIMESTAMP(0) WITHOUT TIME ZONE ,
     "num_of_item" INTEGER NOT NULL
 );
 CREATE TABLE "events"(
